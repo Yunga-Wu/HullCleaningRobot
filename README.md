@@ -1,5 +1,5 @@
 # ShipCleanRobot
-## 一、所需硬件：
+## 一、软硬件准备：
 ### 1. PC + QGroundControl地面站
 ### 2. 遥控手柄
 ### 3. 上位机 Raspberry Pi 4B
