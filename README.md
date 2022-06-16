@@ -19,7 +19,7 @@
 - 树莓派最终配置方案：Ubuntu 20.04.4，ROS Noetic，安装marvros功能包用于树莓派和pixhawk通信
 
 ## 参考资料
-- 【1】[树莓派实验室 Homepage](https://shumeipai.nxez.com/tag/%E6%A0%91%E8%8E%93%E6%B4%BE): Learn how to use raspberry.
+- 【1】[树莓派实验室 Homepage](https://shumeipai.nxez.com/tag/%E6%A0%91%E8%8E%93%E6%B4%BE): Learn how to use raspberry pi.
 - 【2】[ArduPilot Homepage](https://ardupilot.org/ardupilot/index.html): ArduPilot enables the creation and use of trusted, autonomous, unmanned vehicle systems for the peaceful benefit of all.
 - 【3】[Ardusub gitbook](http://www.ardusub.com/): The ArduSub project is a fully-featured open-source solution for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs).
 - 【4】[BlueOS](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.0/): the lateset modified version of Ardusub
