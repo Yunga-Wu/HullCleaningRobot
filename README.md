@@ -1,3 +1,4 @@
+# 软硬件框架搭建
 ## 机械结构
 1. 底盘：履带式
 2. 吸附机构：推进器吸附和永磁吸附相结合
@@ -9,7 +10,7 @@
 
 ## 控制系统环境配置
 1. 上位机：Raspberry Pi 4B, Ubuntu 20.04.4, ROS Noetic
-2. 推进控制器：Pixhawk 飞控，ArduSub 固件
+2. 推进控制器：Pixhawk 2.4.8 飞控，ArduSub 固件
 3. 底盘控制器：stm32
 4. 双目相机： zed2
 5. 地面站： windows 10, QGroundControl
@@ -21,9 +22,21 @@
 #### raspberry pi
 - ardusub官方镜像只支持raspberry 3 B，而最新的BlueOS支持raspberry系列较多型号，但是两者只有命令行界面
 - 树莓派最终配置方案：Ubuntu 20.04.4，ROS Noetic，安装marvros功能包用于树莓派和pixhawk通信
+- 将该系统备份，生成镜像，以后直接使用配置好的镜像
 #### pixhawk
-- 在Ardusub gitbook中下载[v4.0.2](http://www.ardusub.com/resources/downloads.html)版本firmware
+- 在Ardusub gitbook中下载[v4.0.2](http://www.ardusub.com/resources/downloads.html)版本firmware，得到一个.apj格式的固件镜像
+- 用USB将pixhawk与地面站相连，地面站会识别到飞控，在QGroundControl的firmware界面中选择手动选择固件，选中上一步下载的ardusub固件镜像，点击确定，自动烧写到飞控中
 
+![image](https://github.com/Yunga-Wu/HullCleaningRobot/blob/main/image/%E9%A3%9E%E6%8E%A7%E5%9B%BA%E4%BB%B6%E7%83%A7%E5%86%99.png)
+
+- 后期二次开发时，将ardupilot编译生成的.apj文件（一般在bin文件夹）按照这种方式就可以烧写到飞控中，进而更新飞控固件
+
+#### Windows配置
+- 主要是IP地址设置，参考[Network Setup](http://www.ardusub.com/quick-start/installing-companion.html)，将地面站和树莓派IP地址配置到同一网段
+- 如果采用路由器的话，自动分配IP，更方便，不需要自己配置:rabbit:
+- 
+
+# 代码调试
 ## Code
 `cout << "Hello World." << endl; // 这是单行代码`
 
