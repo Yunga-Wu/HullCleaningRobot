@@ -20,9 +20,9 @@
 
 ### 配置记录
 #### raspberry pi
-- ardusub官方镜像只支持raspberry 3 B，而最新的BlueOS支持raspberry系列较多型号，但是两者只有命令行界面
 - 树莓派最终配置方案：Ubuntu 20.04.4，ROS Noetic，安装marvros功能包用于树莓派和pixhawk通信
 - 将该系统备份，生成镜像，以后直接使用配置好的镜像
+- 如果想用官方[Ardusub-Raspbian镜像](http://www.ardusub.com/resources/downloads.html#ardusub-firmware-files)，需要使用raspberry 3 B版本，其他版本的树莓派可以使用[BlueOS镜像](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.0/installation/)(账号：pi，密码：raspberry)，但是两者只有命令行界面
 #### pixhawk
 - 在Ardusub gitbook中下载[v4.0.2](http://www.ardusub.com/resources/downloads.html)版本firmware，得到一个.apj格式的固件镜像
 - 用USB将pixhawk与地面站相连，地面站会识别到飞控，在QGroundControl的firmware界面中选择手动选择固件，选中上一步下载的ardusub固件镜像，点击确定，自动烧写到飞控中
@@ -33,8 +33,34 @@
 
 #### Windows配置
 - 主要是IP地址设置，参考[Network Setup](http://www.ardusub.com/quick-start/installing-companion.html)，将地面站和树莓派IP地址配置到同一网段
-- 如果采用路由器的话，自动分配IP，更方便，不需要自己配置:rabbit:
-- 
+- 如果采用路由器的话，自动分配IP，更方便，不需要自己配置 😂
+- 确认地面站和树莓派处于同一网段后，打开/mavros/mavros/launch/px248.launch文件，将gcs_url的值改为地面站的IP地址
+```
+<!-- content of launch file --> 
+<launch>
+   <arg name="fcu_url" default="/dev/ttyACM0:921600" /> <!-- 921600:pixhawk communication frequency -->
+   <arg name="gcs_url" default="udp://@192.168.8.181" /> <!-- turn url to IP on your PC -->
+   <arg name="tgt_ststem" default="1" />
+   <arg name="tgt_component" default="1" />
+   <arg name="log_output" default="screen" />
+   <arg name="fcu_protocol" default="v2.0" /> <!-- firmware version? -->
+   <arg name="respawm_mavros" default="false" />
+   
+   <include file="$(find mavros)/launch/node.launch">
+      <arg name="pluginlists_yaml" vaule="$(find mavros)/launch/px4_pluginlists.yaml" />
+      <arg name="config_yaml" value="$(find mavros)/launch/px4_config.yaml" />
+      <arg name="fcu_url" value="$(arg fcu_url)" />
+      <arg name="gcs_url" value="$(arg gcs_url)" />
+      <arg name="tgt_ststem" value="$(arg tgt_ststem)" />
+      <arg name="tgt_component" value="$(arg tgt_component)" />
+      <arg name="log_output" value="$(arg log_output)" />
+      <arg name="fcu_protocol" value="$(arg fcu_protocol)" />
+      <arg name="respawm_mavros" value="$(arg respawm_mavros)" />
+   </include>
+</launch>
+```
+- 将树莓派和飞控连接，执行下面代码，此时飞控可以与地面站通信 💝
+`roslaunch mavros px248.launch`
 
 # 代码调试
 ## Code
