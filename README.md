@@ -7,7 +7,7 @@
 ![iamge](https://github.com/Yunga-Wu/HullCleaningRobot/blob/main/image/%E6%9C%BA%E5%99%A8%E4%BA%BA%E6%95%B4%E4%BD%93%E8%AE%BE%E8%AE%A1%E5%B1%95%E7%A4%BA.png)
 
 ## 控制系统环境配置
-### 1. 上位机：Raspberry Pi 4B, Ubuntu 20.04.4, ROS Noetic
+1. 上位机：Raspberry Pi 4B, Ubuntu 20.04.4, ROS Noetic
 ### 2. 推进控制器：Pixhawk 飞控，ArduSub 固件
 ### 3. 底盘控制器：stm32
 ### 4. 双目相机： zed2
