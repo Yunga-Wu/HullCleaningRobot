@@ -22,7 +22,7 @@
 - ardusub官方镜像只支持raspberry 3 B，而最新的BlueOS支持raspberry系列较多型号，但是两者只有命令行界面
 - 树莓派最终配置方案：Ubuntu 20.04.4，ROS Noetic，安装marvros功能包用于树莓派和pixhawk通信
 #### pixhawk
-- 在[Ardusub gitbook](http://www.ardusub.com/resources/downloads.html)中下载v4.0.2版本firmware
+- 在Ardusub gitbook中下载[v4.0.2](http://www.ardusub.com/resources/downloads.html)版本firmware
 
 ## Code
 `cout << "Hello World." << endl; // 这是单行代码`
