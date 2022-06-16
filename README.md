@@ -19,10 +19,11 @@
 - 树莓派最终配置方案：Ubuntu 20.04.4，ROS Noetic，安装marvros功能包用于树莓派和pixhawk通信
 
 ## 参考资料
-- [树莓派实验室 Homepage](https://shumeipai.nxez.com/tag/%E6%A0%91%E8%8E%93%E6%B4%BE):Learn how to use raspberry.
-- [ArduPilot Homepage](https://ardupilot.org/ardupilot/index.html):ArduPilot enables the creation and use of trusted, autonomous, unmanned vehicle systems for the peaceful benefit of all.
-- [Ardusub gitbook](http://www.ardusub.com/):The ArduSub project is a fully-featured open-source solution for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs).
-- [BlueOS](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.0/):the lateset modified version of Ardusub
-- [QGroundControl](https://docs.qgroundcontrol.com/master/en/):QGroundControl provides full flight control and vehicle setup for PX4 or ArduPilot powered vehicles. 
-- [BlueROV ROS wiki](http://wiki.ros.org/Robots/BlueROV):The BlueROV is a remotely operated underwater vehicle from Blue Robotics. It features Blue Robotics thrusters, a flight controller with ArduSub software, and a RaspberryPi running ROS.
-- [ROVMaker Forum](http://rovmaker.cn/):水下机器人中文社区
+- 【1】[树莓派实验室 Homepage](https://shumeipai.nxez.com/tag/%E6%A0%91%E8%8E%93%E6%B4%BE): Learn how to use raspberry.
+- 【2】[ArduPilot Homepage](https://ardupilot.org/ardupilot/index.html): ArduPilot enables the creation and use of trusted, autonomous, unmanned vehicle systems for the peaceful benefit of all.
+- 【3】[Ardusub gitbook](http://www.ardusub.com/): The ArduSub project is a fully-featured open-source solution for remotely operated underwater vehicles (ROVs) and autonomous underwater vehicles (AUVs).
+- 【4】[BlueOS](https://docs.bluerobotics.com/ardusub-zola/software/onboard/BlueOS-1.0/): the lateset modified version of Ardusub
+- 【5】[QGroundControl](https://docs.qgroundcontrol.com/master/en/): QGroundControl provides full flight control and vehicle setup for PX4 or ArduPilot powered vehicles. 
+- 【6】[Robotics Homepage](https://bluerobotics.com/learn/)
+- 【7】[BlueROV ROS wiki](http://wiki.ros.org/Robots/BlueROV): The BlueROV is a remotely operated underwater vehicle from Blue Robotics. It features Blue Robotics thrusters, a flight controller with ArduSub software, and a RaspberryPi running ROS.
+- 【8】[ROVMaker Forum](http://rovmaker.cn/): Underwater Robotics Chinese Forum
